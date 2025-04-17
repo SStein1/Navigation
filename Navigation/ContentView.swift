@@ -16,10 +16,7 @@ struct ContentView: View {
                     .fontWeight(.heavy)
                     .foregroundColor(Color.blue)
                     
-                NavigationLink(destination: Text ("You've arrived to the second view!")
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.orange)) {
+                NavigationLink(destination: SecondView()){
                         Text ("Click Me!")
                             .foregroundColor(Color.purple)
                     }
@@ -31,6 +28,9 @@ struct ContentView: View {
                     
                 }
             }
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
     }
 }
